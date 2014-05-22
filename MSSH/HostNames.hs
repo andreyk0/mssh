@@ -29,10 +29,10 @@ expandHostNames sn =
     Just _ -> [sn]
     Nothing -> [sn]
 
--- ghci> "foo2bar4x1,2,3:5,11.bar.baz" =~ "^([a-zA-Z0-9\\-_]+[a-zA-Z\\-_])([0-9,:]+)(\\..+)?" :: [[String]]
--- [["foo2bar4x1,2,3:5,11.bar.baz","foo2bar4x","1,2,3:5,11",".bar.baz"]]
+-- ghci> "f-oo-2bar4x1,2,3:5,11.bar.baz" =~ "^([a-zA-Z0-9_-]+[a-zA-Z_-])([0-9,:]+)(\\..+)?" :: [[String]]
+-- [["f-oo-2bar4x1,2,3:5,11.bar.baz","f-oo-2bar4x","1,2,3:5,11",".bar.baz"]]
 splitBaseNameAndNumRanges:: String -> [[String]]
-splitBaseNameAndNumRanges s = s =~ "^([a-zA-Z0-9\\-_]+[a-zA-Z\\-_])([0-9,:]+)(\\..+)?"
+splitBaseNameAndNumRanges s = s =~ "^([a-zA-Z0-9_-]+[a-zA-Z_-])([0-9,:]+)(\\..+)?" :: [[String]]
 
 -- ghci> "1,2:3,4,5" =~ "[^,]+" :: [[String]]
 -- [["1"],["2:3"],["4"],["5"]]
