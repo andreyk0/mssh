@@ -34,7 +34,7 @@ executable mssh
 
   --other-extensions:
 
-  ghc-options:         -O2 -Wall -fwarn-tabs -threaded -with-rtsopts="-N"
+  ghc-options:         -O2 -Wall -fwarn-tabs -threaded
 
   -- hs-source-dirs:
 
