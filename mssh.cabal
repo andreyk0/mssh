@@ -22,7 +22,7 @@ executable mssh
   -- other-modules: 
 
 
-  build-depends:       base >= 4.6 && < 4.8,
+  build-depends:       base >= 4.6 && < 4.11,
                        SafeSemaphore >= 0.10,
                        process >= 1.1,
                        cmdargs >= 0.10,

@@ -1,0 +1,8 @@
+flags: {}
+packages:
+- '.'
+extra-deps:
+- SafeSemaphore-0.10.1
+- regex-tdfa-text-1.0.0.2
+resolver: lts-2.15
+#resolver: nightly-2015-06-26
